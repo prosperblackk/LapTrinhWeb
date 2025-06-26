@@ -1,0 +1,584 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cv-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  min-height: calc(100vh - 40px);
+}
+
+/* Left Sidebar */
+.sidebar {
+  width: 350px;
+  background: #f8f9ff;
+  padding: 40px 30px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.profile-section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  color: #6366f1;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.quote-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #6366f1;
+  margin-bottom: 30px;
+}
+
+.quote {
+  font-style: italic;
+  color: #4b5563;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.quote-author {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.contact-section {
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.contact-icon {
+  width: 16px;
+  margin-right: 12px;
+  color: #9ca3af;
+}
+
+.section-header {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+}
+
+.instagram-icon {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+.dribbble-icon {
+  background: #ea4c89;
+}
+.twitter-icon {
+  background: #1da1f2;
+}
+.linkedin-icon {
+  background: #0077b5;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flag-italy {
+  background: linear-gradient(
+    to right,
+    #009246 33%,
+    white 33%,
+    white 66%,
+    #ce2b37 66%
+  );
+}
+
+.flag-greece {
+  background: #0d5eaf;
+  position: relative;
+}
+
+.flag-greece::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background: linear-gradient(
+    to bottom,
+    #0d5eaf 11%,
+    white 11%,
+    white 22%,
+    #0d5eaf 22%,
+    #0d5eaf 33%,
+    white 33%,
+    white 44%,
+    #0d5eaf 44%
+  );
+}
+
+.flag-uk {
+  background: #012169;
+  position: relative;
+}
+
+.flag-uk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      45deg,
+      transparent 30%,
+      white 30%,
+      white 35%,
+      transparent 35%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 30%,
+      white 30%,
+      white 35%,
+      transparent 35%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 65%,
+      white 65%,
+      white 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 65%,
+      white 65%,
+      white 70%,
+      transparent 70%
+    );
+}
+
+.flag-uk::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: white;
+}
+
+.flag-spain {
+  background: linear-gradient(
+    to bottom,
+    #c60b1e 25%,
+    #ffc400 25%,
+    #ffc400 75%,
+    #c60b1e 75%
+  );
+}
+
+.language-info {
+  font-size: 0.9rem;
+}
+
+.language-name {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.language-level {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #6366f1;
+  border-radius: 50%;
+}
+
+/* Experience Items */
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.meta-logo {
+  background: #1877f2;
+  font-family: Arial, sans-serif;
+}
+.apple-logo {
+  background: #000;
+  font-size: 20px;
+}
+.tesla-logo {
+  background: #cc0000;
+  font-family: Arial, sans-serif;
+}
+.google-logo {
+  background: #4285f4;
+  font-family: Arial, sans-serif;
+}
+.vectornator-logo {
+  background: #000;
+  font-size: 18px;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.company-name {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.experience-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+}
+
+.location i {
+  margin-right: 4px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.date.current {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+/* Education Grid */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.education-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.education-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.memorisely-logo {
+  background: #000;
+}
+.ux-academy-logo {
+  background: #6366f1;
+}
+.coursera-logo {
+  background: #0056d3;
+}
+
+.education-item h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.education-item .course {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.education-item .date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skill-category h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-category h5 i {
+  margin-right: 8px;
+  color: #6366f1;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.skill-tag.design {
+  background: #6366f1;
+  color: white;
+}
+
+.skill-tag.development {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+/* Tools Section */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.tool-item {
+  text-align: center;
+}
+
+.tool-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+.figma-icon {
+  background: #f24e1e;
+}
+.maze-icon {
+  background: #6366f1;
+}
+.spline-icon {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+.zeplin-icon {
+  background: #fdad00;
+}
+.vectornator-icon {
+  background: #000;
+}
+.rotato-icon {
+  background: #000;
+}
+.vscode-icon {
+  background: #007acc;
+}
+.xcode-icon {
+  background: #1575f9;
+}
+.notion-icon {
+  background: #000;
+}
+
+.tool-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 3px;
+}
+
+.tool-desc {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
